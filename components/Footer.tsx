@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import gpklogo from "@/public/gpk_logo_transparent.png";
 
 const links = [
@@ -60,20 +61,23 @@ export default function Footer() {
         <p className="-mt-2">
           © 2026 Graphics Programming Knights · UCF RSO
         </p>
-        <ul className="flex flex-row gap-5">
+        <ul className="flex flex-row gap-5 text-text-secondary">
           <li>
-            <a href="https://github.com/GraphicsProgrammingKnights/gpkweb" target="_blank" rel="noopener noreferrer">
-              <Image src="/github-logo.svg" alt="github link" className="object-cover w-6 h-auto" width={24} height={24} />
+            <a href="https://github.com/GraphicsProgrammingKnights/gpkweb" target="_blank" rel="noopener noreferrer"
+              aria-label="github link" className="hover:text-text-primary transition-colors">
+              <FaGithub className="w-6 h-6" />
             </a>
           </li>
           <li>
-            <a href="https://www.instagram.com/gpknights_" target="_blank" rel="noopener noreferrer">
-              <Image src="/instagram-logo.svg" alt="insta link" className="object-cover w-6 h-auto" width={24} height={24} />
+            <a href="https://www.instagram.com/gpknights_" target="_blank" rel="noopener noreferrer"
+              aria-label="insta link" className="hover:text-text-primary transition-colors">
+              <FaInstagram className="w-6 h-6" />
             </a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/company/graphics-programming-knights/" target="_blank" rel="noopener noreferrer">
-              <Image src="/linkedin-logo.svg" alt="linkedin link" className="object-cover w-6 h-auto" width={24} height={24} />
+            <a href="https://www.linkedin.com/company/graphics-programming-knights/" target="_blank" rel="noopener noreferrer"
+              aria-label="linkedin link" className="hover:text-text-primary transition-colors">
+              <FaLinkedin className="w-6 h-6" />
             </a>
           </li>
         </ul>
