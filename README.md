@@ -14,12 +14,12 @@
 - Stevin George ([@StevScripts](https://github.com/StevScripts)) | GPK Outreach Lead
 
 **Dev Team**
-- Kevin Li ([@kevinli7673](https://github.com/kevinli7673)) | GPK Treasurer
-- Zeeshan Memon ([@satasatalight](https://github.com/satasatalight))
-- Nicole Bustos ([@nickycodezz](https://github.com/nickycodezz))
 - Jeremy Whatts Rodriguez ([@cunkin375](https://github.com/cunkin375))
-- Abigail Loken ([@Abbby1007](https://github.com/Abbby1007))
+- Zeeshan Memon ([@satasatalight](https://github.com/satasatalight))
+- Kevin Li ([@kevinli7673](https://github.com/kevinli7673)) | GPK Treasurer
+- Nicole Bustos ([@nickycodezz](https://github.com/nickycodezz))
 - Alvaro Canseco-Martinez ([@a1vcm](https://github.com/a1vcm))
+- Abigail Loken ([@Abbby1007](https://github.com/Abbby1007))
 - Ethan Fu ([@yaboi332](https://github.com/yaboi332))
 
 ## Tech Stack
