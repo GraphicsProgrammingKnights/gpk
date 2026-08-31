@@ -6,12 +6,7 @@ import gpkTriangleLogo from "@/public/gpk_logo_new.webp";
 
 export default function AsciiHero() {
   return (
-    <div className="flex items-center justify-start w-225 max-w-full h-full -translate-y-15">
-      {/* ── Entrance "swish" ──────────────────────────────────────────────
-          Starts at scale 0, springs past full size, settles back down.
-          Lower `damping` relative to `stiffness` = bigger overshoot/bounce;
-          raise `damping` for a softer landing. `mass` slows the whole thing
-          down if you want the swish to feel heavier. */}
+    <div className="flex items-center justify-start w-full h-full -translate-y-15">
       <motion.div
         className="relative w-full h-full"
         initial={{ scale: 0 }}
@@ -25,13 +20,6 @@ export default function AsciiHero() {
           priority
         />
 
-        {/* ── Shine sweep ─────────────────────────────────────────────────
-            A soft white band that slides diagonally across the logo. It's
-            masked to the logo image's own alpha channel, so the glow only
-            ever lands on the logo's pixels rather than a rectangle around
-            it. To fire it on hover instead of automatically, delete
-            `animate`/`transition` here and drive it with `whileHover` on
-            the wrapping motion.div above instead. */}
         <motion.div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0"
