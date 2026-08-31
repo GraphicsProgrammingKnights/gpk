@@ -1,4 +1,5 @@
 import { FaInstagram, FaLinkedin, FaDiscord } from "react-icons/fa";
+import AsciiHero from "./AsciiHero";
 
 export default function HeroSection() {
   return (
@@ -47,9 +48,8 @@ export default function HeroSection() {
       </div>
 
       {/* Right Column: Placeholder for ASCII render */}
-      <div className="flex justify-center items-center w-full h-full">
-        {/* ASCII render goes here -- see T6 */}
-        <span className="text-text-secondary italic text-2xl translate-x-8 md:translate-x-16">[ASCII Render Placeholder]</span>
+      <div className="flex justify-center items-center w-205 h-205">
+        <AsciiHero />
       </div>
     </section>
   );

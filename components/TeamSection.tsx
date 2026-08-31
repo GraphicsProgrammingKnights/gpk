@@ -31,7 +31,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Andres Ortiz",
     title: "Secretary",
-    memberSince: "Fall 2025",
+    memberSince: "Summer 2026",
     pfpSrc: "/teampics/andres.webp", 
     linkedinUrl: "https://www.linkedin.com/in/andresortizmachado/",
     isOfficer: true,
@@ -61,7 +61,7 @@ const teamMembers: TeamMember[] = [
     isOfficer: true,
   },
   {
-    name: "Alex De Vera Cruz",
+    name: "Alex Da Vera Cruz",
     title: "Workshops Director",
     memberSince: "Summer 2025",
     pfpSrc: "/teampics/alex.webp",
