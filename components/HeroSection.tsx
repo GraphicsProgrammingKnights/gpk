@@ -3,7 +3,7 @@ import AsciiHero from "./AsciiHero";
 
 export default function HeroSection() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-36 items-center py-8 md:py-16 pr-8 md:pr-16 bg-page-background text-text-primary w-full flex-1">
+    <section className="grid grid-cols-1 md:grid-cols-[1fr_1.2fr] gap-8 md:gap-36 items-center py-8 md:py-16 pr-8 md:pr-16 bg-page-background text-text-primary w-full flex-1">
       {/* Left Column: Heading, Subheading, Button, and Icons */}
       <div className="flex flex-col gap-8 max-w-3xl -ml-24 md:-ml-36">
         <h1 className="text-6xl md:text-8xl font-extrabold tracking-tight">
@@ -48,7 +48,7 @@ export default function HeroSection() {
       </div>
 
       {/* Right Column: Placeholder for ASCII render */}
-      <div className="flex justify-center items-center w-205 h-205">
+      <div className="flex justify-center items-center w-56 sm:w-64 md:w-56 lg:w-70 xl:w-[60rem] 2xl:w-165 max-w-full aspect-square">
         <AsciiHero />
       </div>
     </section>
