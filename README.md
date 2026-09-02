@@ -1,19 +1,16 @@
-# Graphics Programming Knights Web Dev Repo
-
 <div align="center">
-  <img src="public/gpk_banner_trim.png" alt="GPK Banner">
+  <img src="public/gpk_logo_new.webp" alt="GPK Banner" height=400 width = 400>
 </div>
 
-## Team
+# Graphics Programming Knights Monorepository
 
-**Lead**
-- Sebastian Noel ([@sebastian-noel](https://github.com/sebastian-noel)) | GPK Dev Lead
+### GPK Dev Team
 
-**Admins**
-- Alejandro Jaimes ([@alecocosette](https://github.com/alecocosette)) | GPK President
-- Stevin George ([@StevScripts](https://github.com/StevScripts)) | GPK Outreach Lead
+Led by: **Sebastian Noel** ([@sebastian-noel](https://github.com/sebastian-noel)) | GPK Dev Lead
 
-**Dev Team**
+Administrated by: **Alejandro Jaimes** ([@alecocosette](https://github.com/alecocosette)) | GPK President +  **Stevin George** ([@StevScripts](https://github.com/StevScripts)) | GPK Outreach Lead
+
+**Dev Team:**
 - Jeremy Whatts Rodriguez ([@cunkin375](https://github.com/cunkin375))
 - Zeeshan Memon ([@satasatalight](https://github.com/satasatalight))
 - Kevin Li ([@kevinli7673](https://github.com/kevinli7673)) | GPK Treasurer
@@ -22,7 +19,7 @@
 - Abigail Loken ([@Abbby1007](https://github.com/Abbby1007))
 - Ethan Fu ([@yaboi332](https://github.com/yaboi332))
 
-## Tech Stack
+### Tech Stack
 
 - Next.js
 - React Three Fiber (R3F) + Drei
@@ -31,7 +28,7 @@
 - ESLint
 - Node.js (LTS)
 
-## Quick Start
+### Quick Start
 
 ```bash
 git clone https://github.com/GraphicsProgrammingKnights/gpkweb
@@ -44,7 +41,7 @@ Open <http://localhost:3000>.
 
 For full setup details (Node version pinning, lint, build, Docker), the PR workflow, branch/commit conventions, and a command cheat sheet, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## Project Structure
+### Project Structure
 
 ```text
 .
@@ -62,7 +59,7 @@ For full setup details (Node version pinning, lint, build, Docker), the PR workf
 └── README.md
 ```
 
-## Infrastructure
+### Infrastructure
 
 GitHub Actions workflows run automatically on PRs and pushes to `main`:
 
@@ -73,10 +70,10 @@ GitHub Actions workflows run automatically on PRs and pushes to `main`:
 
 View workflow runs: [Actions tab](https://github.com/GraphicsProgrammingKnights/gpkweb/actions).
 
-## Contributing
+### Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the full contributor guide — setup, PR workflow, branch/commit conventions, Docker commands, and a "what to do / not to do" reference.
 
-## License
+### License
 
 This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LICENSE) file for details.
