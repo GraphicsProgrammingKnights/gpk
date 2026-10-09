@@ -14,7 +14,7 @@ Administrated by: **Alejandro Jaimes** ([@alecocosette](https://github.com/aleco
 - Jeremy Whatts Rodriguez ([@cunkin375](https://github.com/cunkin375))
 - Zeeshan Memon ([@satasatalight](https://github.com/satasatalight))
 - Kevin Li ([@kevinli7673](https://github.com/kevinli7673)) | GPK Treasurer
-- Jason Nguyen ([@jasonnugget](https://github.com/jasonnugget)
+- Jason Nguyen ([@jasonnugget](https://github.com/jasonnugget))
 - Nicole Bustos ([@nickycodezz](https://github.com/nickycodezz))
 - Alvaro Canseco-Martinez ([@a1vcm](https://github.com/a1vcm))
 - Abigail Loken ([@Abbby1007](https://github.com/Abbby1007))
