@@ -50,7 +50,7 @@ export default function HeroSection() {
       </div>
 
       {/* Keep the animated logo proportional to the available column width. */}
-      <div className="mx-auto aspect-square w-full max-w-72 sm:max-w-96 lg:max-w-lg">
+      <div className="order-first mx-auto aspect-square w-full max-w-72 sm:max-w-96 lg:order-last lg:max-w-lg">
         <AsciiHero />
       </div>
     </section>
