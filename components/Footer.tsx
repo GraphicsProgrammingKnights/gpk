@@ -1,87 +1,101 @@
 import Image from "next/image";
-import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
-import gpklogo from "@/public/gpk_logo_transparent.png";
+import { FaDiscord, FaGithub, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import gpklogo from "@/public/gpk_logo_new.webp";
 
-const links = [
+const linkGroups = [
   {
     title: "Club",
-    text: ["Home", "About us", "Challenges", "Team"],
-    links: ["#home", "#about", "#challenges", "#team"]
+    links: [
+      { label: "Home", href: "#home" },
+      { label: "About us", href: "#about" },
+      { label: "Challenges", href: "#challenges" },
+      { label: "Team", href: "#team" },
+    ],
   },
   {
     title: "Resources",
-    text: ["Workshop Slides", "Challenges Archive", "GitHub Repos", "LinkTree"],
-    links: ["https://github.com/GraphicsProgrammingKnights/Workshops", "#challenges", "https://github.com/orgs/GraphicsProgrammingKnights/repositories", "https://linktr.ee/GPKnights"]
+    links: [
+      { label: "Workshop Slides", href: "https://github.com/GraphicsProgrammingKnights/Workshops" },
+      { label: "GitHub Repos", href: "https://github.com/orgs/GraphicsProgrammingKnights/repositories" },
+      { label: "Linktree", href: "https://linktr.ee/GPKnights" },
+    ],
   },
-  {
-    title: "Connect",
-    text: ["Discord", "Instagram", "Linkedin", "Youtube"],
-    links: ["https://discord.gg/h9VRpcQDV", "https://www.instagram.com/gpknights_",
-      "https://www.linkedin.com/company/graphics-programming-knights/", "https://www.youtube.com/@GraphicProgrammingKnights"]
-  }
-]
+];
 
-function FooterRow({ name, option, links }: { name: string; option: string[]; links: string[] }) {
-  return (
-    <div className="flex flex-col items-start">
-      <span className="text-sm mb-6 uppercase font-bold">{name}</span>
-      {option.map((o, i) => (
-        <a className="text-text-secondary mb-4"
-          key={o}
-          href={links[i]}
-          target={links[i].startsWith("#") ? "_self" : "_blank"}
-          rel={links[i].startsWith("#") ? undefined : "noopener noreferrer"}
-        >
-          {o}
-        </a>
-      ))}
-    </div>
-  )
-}
+const socialLinks = [
+  { label: "Discord", href: "https://discord.gg/h9VRpcQDV", icon: FaDiscord },
+  { label: "Instagram", href: "https://www.instagram.com/gpknights_", icon: FaInstagram },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/graphics-programming-knights/", icon: FaLinkedin },
+  { label: "YouTube", href: "https://www.youtube.com/@GraphicProgrammingKnights", icon: FaYoutube },
+  { label: "GitHub", href: "https://github.com/GraphicsProgrammingKnights/gpkweb", icon: FaGithub },
+];
+
+const focusStyles = "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent-light";
 
 export default function Footer() {
   return (
-    <div className="flex flex-col w-full">
-      <hr className="border-card-border w-full" />
-      <div className="grid grid-cols-4 gap-10 w-full px-10 pt-16 pb-8 items-start">
-        <div className="flex flex-col gap-4">
-          <Image src={gpklogo} alt="GPK Logo"
-            className="w-20 h-auto" />
-          <span className="uppercase font-bold">Graphics Programming <br /> Knights</span>
-          <p className="text-text-secondary">
-            UCF&apos;s Computer Graphics RSO. <br />
-            Building the next generation of <br />
-            graphics engineers. <br />
-          </p>
+    <div className="w-full border-t border-card-border">
+      <div className="mx-auto max-w-7xl px-6 sm:px-10">
+        <div className="grid grid-cols-2 gap-x-8 gap-y-8 py-8 md:grid-cols-[2fr_1fr_1fr] md:gap-x-12">
+          <div className="col-span-2 flex items-center gap-4 md:col-span-1">
+            <Image
+              src={gpklogo}
+              alt="GPK logo"
+              className="h-auto w-28 shrink-0 sm:w-36"
+              sizes="(min-width: 640px) 144px, 112px"
+            />
+            <div className="max-w-60">
+              <p className="text-sm font-bold leading-snug text-text-primary sm:text-base">
+                Graphics Programming Knights
+              </p>
+              <p className="mt-2 text-sm leading-relaxed text-text-secondary">
+                UCF&apos;s computer graphics community.
+              </p>
+            </div>
+          </div>
+          {linkGroups.map((group) => (
+            <nav key={group.title} aria-label={`Footer ${group.title.toLowerCase()}`}>
+              <h2 className="mb-3 text-xs font-semibold uppercase tracking-widest text-text-primary">
+                {group.title}
+              </h2>
+              <ul className="space-y-1">
+                {group.links.map(({ label, href }) => (
+                  <li key={label}>
+                    <a
+                      href={href}
+                      target={href.startsWith("#") ? undefined : "_blank"}
+                      rel={href.startsWith("#") ? undefined : "noopener noreferrer"}
+                      className={`inline-block py-1 text-sm text-text-secondary transition-colors hover:text-accent-light ${focusStyles}`}
+                    >
+                      {label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          ))}
         </div>
-        {links.map(s => <FooterRow key={s.title} name={s.title} option={s.text} links={s.links} />)}
-      </div>
-      <hr className="border-card-border mx-10" />
-      <div className="flex justify-between mx-10 pt-8 pb-8 items-center">
-        <p className="-mt-2">
-          © 2026 Graphics Programming Knights · UCF RSO
-        </p>
-        <ul className="flex flex-row gap-5 text-text-secondary">
-          <li>
-            <a href="https://github.com/GraphicsProgrammingKnights/gpkweb" target="_blank" rel="noopener noreferrer"
-              aria-label="github link" className="hover:text-text-primary transition-colors">
-              <FaGithub className="w-6 h-6" />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/gpknights_" target="_blank" rel="noopener noreferrer"
-              aria-label="insta link" className="hover:text-text-primary transition-colors">
-              <FaInstagram className="w-6 h-6" />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/company/graphics-programming-knights/" target="_blank" rel="noopener noreferrer"
-              aria-label="linkedin link" className="hover:text-text-primary transition-colors">
-              <FaLinkedin className="w-6 h-6" />
-            </a>
-          </li>
-        </ul>
+        <div className="flex flex-col items-center justify-between gap-3 border-t border-card-border py-3 sm:flex-row">
+          <p className="text-center text-xs text-text-secondary sm:text-left">
+            © 2026 Graphics Programming Knights
+          </p>
+          <ul aria-label="Social links" className="flex gap-1 text-text-secondary">
+            {socialLinks.map(({ label, href, icon: Icon }) => (
+              <li key={label}>
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className={`flex h-11 w-11 items-center justify-center rounded-lg transition-colors hover:bg-card-background hover:text-accent-light ${focusStyles}`}
+                >
+                  <Icon className="h-5 w-5" aria-hidden="true" />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
-  )
+  );
 }
