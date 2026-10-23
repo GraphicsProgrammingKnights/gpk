@@ -3,23 +3,23 @@ import AsciiHero from "./AsciiHero";
 
 export default function HeroSection() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-[1fr_1.2fr] gap-8 md:gap-36 items-center py-8 md:py-16 pr-8 md:pr-16 bg-page-background text-text-primary w-full flex-1">
+    <section className="grid w-full min-w-0 flex-1 grid-cols-1 content-center items-center gap-8 py-10 text-text-primary sm:py-14 lg:grid-cols-[1.1fr_1fr] lg:gap-12 lg:py-16">
       {/* Left Column: Heading, Subheading, Button, and Icons */}
-      <div className="flex flex-col gap-8 max-w-3xl -ml-24 md:-ml-36">
-        <h1 className="text-6xl md:text-8xl font-extrabold tracking-tight">
+      <div className="flex min-w-0 flex-col gap-6">
+        <h1 className="text-[clamp(2.4rem,5.4vw,5.4rem)] leading-[1.05] font-extrabold tracking-tight">
           Graphics Programming Knights
         </h1>
-        <p className="text-2xl md:text-3xl text-text-secondary">
+        <p className="max-w-xl text-lg leading-relaxed text-text-secondary sm:text-xl lg:text-2xl">
           University of Central Florida&apos;s Computer Graphics RSO
         </p>
 
         {/* Button and Icons Row */}
-        <div className="flex flex-row items-center gap-6 mt-2">
+        <div className="flex flex-wrap items-center gap-5 mt-2">
           <a
             href="https://discord.gg/XwDHkT3fRa"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-accent hover:bg-accent-light px-10 py-5 rounded-full text-text-primary text-xl font-medium transition-colors"
+            className="inline-flex shrink-0 items-center gap-2 rounded-full bg-accent px-6 py-3 text-lg font-medium text-text-primary transition-colors hover:bg-accent-light focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent-light"
           >
             Join Us
             <FaDiscord size={28} />
@@ -29,26 +29,28 @@ export default function HeroSection() {
           <div className="flex flex-row items-center gap-5 text-text-secondary">
             <a
               href="https://www.instagram.com/gpknights_"
+              aria-label="Instagram"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-text-primary transition-colors"
+              className="inline-flex h-11 w-11 items-center justify-center hover:text-text-primary transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent-light"
             >
-              <FaInstagram className="w-10 h-10" />
+              <FaInstagram className="w-7 h-7" />
             </a>
             <a
               href="https://www.linkedin.com/company/graphics-programming-knights/"
+              aria-label="LinkedIn"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-text-primary transition-colors"
+              className="inline-flex h-11 w-11 items-center justify-center hover:text-text-primary transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent-light"
             >
-              <FaLinkedin className="w-10 h-10" />
+              <FaLinkedin className="w-7 h-7" />
             </a>
           </div>
         </div>
       </div>
 
-      {/* Right Column: Placeholder for ASCII render */}
-      <div className="flex justify-center items-center w-56 sm:w-64 md:w-56 lg:w-70 xl:w-[60rem] 2xl:w-165 max-w-full aspect-square">
+      {/* Keep the animated logo proportional to the available column width. */}
+      <div className="order-first mx-auto aspect-square w-full max-w-72 sm:max-w-96 lg:order-last lg:max-w-lg">
         <AsciiHero />
       </div>
     </section>

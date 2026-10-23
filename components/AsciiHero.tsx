@@ -6,17 +6,18 @@ import gpkTriangleLogo from "@/public/gpk_logo_new.webp";
 
 export default function AsciiHero() {
   return (
-    <div className="flex items-center justify-start w-full h-full -translate-y-15">
+    <div className="flex items-center justify-center w-full h-full overflow-hidden">
       <motion.div
         className="relative w-full h-full"
         initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
+        animate={{ scale: 1.2 }}
         transition={{ type: "spring", stiffness: 100, damping: 10, mass: 1 }}
       >
         <Image
           src={gpkTriangleLogo}
           alt="Graphics Programming Knights logo"
-          className="w-full h-full object-fill"
+          className="w-full h-full object-contain"
+          sizes="(min-width: 1280px) 512px, (min-width: 1024px) 45vw, (min-width: 640px) 384px, 288px"
           priority
         />
 
