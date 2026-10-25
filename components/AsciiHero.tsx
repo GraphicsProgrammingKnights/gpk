@@ -17,7 +17,7 @@ export default function AsciiHero() {
           src={gpkTriangleLogo}
           alt="Graphics Programming Knights logo"
           className="w-full h-full object-contain"
-          sizes="(min-width: 1280px) 512px, (min-width: 1024px) 45vw, (min-width: 640px) 384px, 288px"
+          sizes="(min-width: 1344px) 38vw, (min-width: 1280px) 512px, (min-width: 1024px) 45vw, (min-width: 640px) 384px, 288px"
           priority
         />
 
