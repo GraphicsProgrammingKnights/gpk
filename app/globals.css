@@ -13,6 +13,10 @@
 }
 
 html {
+  /* Preserve the desktop composition at the 1344px reference width.
+     Tailwind's rem-based type, spacing, and container widths then grow together.
+     Keep the user's default font size on smaller screens. */
+  font-size: max(100%, calc(100vw / 84));
   scroll-behavior: smooth;
   scroll-padding-top: 4rem;
 }

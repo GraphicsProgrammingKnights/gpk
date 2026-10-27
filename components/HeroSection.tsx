@@ -22,7 +22,7 @@ export default function HeroSection() {
             className="inline-flex shrink-0 items-center gap-2 rounded-full bg-accent px-6 py-3 text-lg font-medium text-text-primary transition-colors hover:bg-accent-light focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent-light"
           >
             Join Us
-            <FaDiscord size={28} />
+            <FaDiscord className="h-7 w-7" />
           </a>
 
           {/* Icons Row */}
