@@ -42,6 +42,18 @@ Open <http://localhost:3000>.
 
 For full setup details (Node version pinning, lint, build, Docker), the PR workflow, branch/commit conventions, and a command cheat sheet, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
+### Membership dues (Stripe)
+
+The "Pay dues" button on the homepage sends members to Stripe Checkout. To run it locally:
+
+1. Copy `.env.example` to `.env.local` (or to `.env` for `docker compose up`).
+2. In the Stripe Dashboard, create one Product + Price per membership term (e.g. "GPK Membership - 2026-27") and paste the Price ID into `STRIPE_PRICE_ID`.
+3. Use test mode keys and the test card `4242 4242 4242 4242` to try the full flow.
+
+Each payment in the Dashboard shows the payer's name, email, T-shirt size and Discord username (also available as columns in the payments export), and every payer gets a Customer record.
+
+The site builds and runs with no Stripe variables set; the Pay dues button then returns a "not set up yet" message.
+
 ### Project Structure
 
 ```text
