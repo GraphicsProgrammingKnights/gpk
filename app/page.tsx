@@ -1,6 +1,7 @@
 import AboutSection from "@/components/AboutSection";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
+import MembershipSection from "@/components/MembershipSection";
 import TeamSection from "@/components/TeamSection";
 import ChallengesSection from "@/components/ChallengesSection"
 
@@ -27,6 +28,14 @@ export default function Home() {
             Monthly Challenges
           </h2>
           <ChallengesSection />
+        </section>
+
+        {/* START OF THE MEMBERSHIP SECTION */}
+        <section id="membership" className="min-h-screen w-full flex flex-col items-center px-6 sm:px-10 lg:px-24">
+          <h2 className="text-4xl font-bold p-16 m-16 h-16 gap-16">
+            Membership
+          </h2>
+          <MembershipSection />
         </section>
 
         {/* START OF THE TEAM SECTION */}

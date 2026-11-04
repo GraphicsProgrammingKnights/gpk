@@ -9,6 +9,7 @@ const linkGroups = [
       { label: "Home", href: "#home" },
       { label: "About us", href: "#about" },
       { label: "Challenges", href: "#challenges" },
+      { label: "Membership", href: "#membership" },
       { label: "Team", href: "#team" },
     ],
   },
