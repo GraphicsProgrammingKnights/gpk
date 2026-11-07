@@ -4,6 +4,10 @@ import { useEffect, useState } from "react";
 
 const sections = ["home", "about", "challenges", "membership", "team"];
 
+/* membership gets no text link (the Pay dues button covers it) but is still observed,
+   so no other link stays highlighted while that section is in view */
+const navLinks = sections.filter((section) => section !== "membership");
+
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
 
@@ -55,7 +59,7 @@ export default function Navbar() {
 
         {/* active section gets filled white box!!! On phones the links drop to their own row. */}
         <div className="flex w-full items-center justify-between md:ml-auto md:w-auto md:justify-end md:gap-4 lg:gap-8">
-          {sections.map((section) => (
+          {navLinks.map((section) => (
             <a
               key={section}
               href={`#${section}`}
