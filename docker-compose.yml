@@ -13,6 +13,11 @@ services:
       - "3000:3000"
     environment:
       - NODE_ENV=production
+    # Stripe keys and site URL live in a local .env (see .env.example). Optional so
+    # `docker compose up` still works without one.
+    env_file:
+      - path: .env
+        required: false
     restart: unless-stopped
 
 # =============================================================================
